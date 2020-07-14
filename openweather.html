@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>OpenWeather.org Weather</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="css/styles.css" rel="stylesheet" />
+	<script src="js/moment.js"></script>
+	<script defer src="js/weather.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<header>
+					<h1>Weather Checker</h1>
+				</header>
+				<br>
+				<div class="col-md-12">
+					<label for="searchbox">Enter a location or a ZIP code</label>
+					<input type="text" class="form-control" name="searchbox" id="searchbox" size="60"
+						placeholder="Enter a location or a ZIP code" />
+					<button type="button" class="btn btn-primary" id="searchbutton">Current Weather</button>
+					<button type="button" class="btn btn-primary" id="searchbuttonforecast">5 Day Forecast</button>
+					<div class="col-md-8" id="weather"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
