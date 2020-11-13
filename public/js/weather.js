@@ -25,9 +25,9 @@ const getWeather = (location) => {
     let output = ''
 
     if (isNumeric(location)) {
-        url = `http://api.openweathermap.org/data/2.5/weather?zip=${location}&units=imperial${api_key}`
+        url = `https://api.openweathermap.org/data/2.5/weather?zip=${location}&units=imperial${api_key}`
     } else {
-        url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial${api_key}`
+        url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial${api_key}`
     }
 
     console.log(url)
@@ -70,7 +70,7 @@ const getWeather = (location) => {
                 // Getting icon to represent current weather and setting alt text for it
                 output += `<h2>${data.name}</h2>`
                 output += `<h4>${data.weather[0].description.toUpperCase()}</h4>`
-                output += `<img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="A ${data.weather[0].description} icon" width="100" height="100">`
+                output += `<img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="A ${data.weather[0].description} icon" width="100" height="100">`
                 output += `<div>Current Temperature: ${data.main.temp.toFixed(1)} &#730F</div>`
                 output += `<div>Current Humidity: ${data.main.humidity.toFixed(1)}&#37;</div>`
                 output += `<div>Feels Like: ${data.main.feels_like.toFixed(1)} &#730F</div>`
@@ -101,9 +101,9 @@ const getWeatherForecast = (location) => {
 
     // do we have a location or a zip code?
     if (isNumeric(location)) {
-        url = `http://api.openweathermap.org/data/2.5/forecast?zip=${location}&units=imperial${api_key}`
+        url = `https://api.openweathermap.org/data/2.5/forecast?zip=${location}&units=imperial${api_key}`
     } else {
-        url = `http://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial${api_key}`
+        url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&units=imperial${api_key}`
     }
 
     console.log(url)
@@ -139,7 +139,7 @@ const getWeatherForecast = (location) => {
                     output += `<div>Humidity: ${data.list[i].main.humidity}</div>`
                     output += `<div>${data.list[i].weather[0].description}</div>`
                     let icon = data.list[i].weather[0].icon;
-                    icon = `<img src="http://openweathermap.org/img/w/${icon}.png" />`
+                    icon = `<img src="https://openweathermap.org/img/w/${icon}.png" />`
                     output += icon
                     output += `</div>`
                 }
