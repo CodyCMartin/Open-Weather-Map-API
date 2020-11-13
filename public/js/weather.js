@@ -78,7 +78,7 @@ const getWeather = (location) => {
                 output += `<div>Low Temperature: ${data.main.temp_min.toFixed(1)} &#730F</div>`
                 output += `<div>Wind Speed: ${data.wind.speed.toFixed(1)} MPH ${windDirection}</div>`
                 output += `<div>Pressure: ${currentPressure_Psi.toFixed(2)} PSI</div><br>`
-                output += `<a href="https://www.google.com/maps/search/?api=1&query=${searchUrl}" class="badge badge-primary" >Open Map</a>`
+                output += `<a href="https://www.google.com/maps/search/?api=1&query=${searchUrl}" class="badge badge-primary" target="_blank" >Open Map</a>`
 
 
             } else {
